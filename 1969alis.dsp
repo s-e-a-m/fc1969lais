@@ -1,5 +1,5 @@
 declare name "ALVIN LUCIER - I'M SITTING IN A ROOM (1969)";
-declare version "1.0";
+declare version "0.1.0";
 declare author "Giuseppe Silvi";
 declare license "GNU-GPL-v3";
 declare copyright "(c)SEAM 2019";
