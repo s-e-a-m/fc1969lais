@@ -10,7 +10,7 @@ declare options "[midi:on]";
 //-------------------------------------------------
 
 import("stdfaust.lib");
-import("../faust-code/seam.lib");
+import("../faust-libraries/seam.lib");
 
 maxdel = ma.SR *(180);
 
