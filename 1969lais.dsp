@@ -11,7 +11,25 @@ declare options "[midi:on]";
 
 import("stdfaust.lib");
 
-//================= Tweaked from faust examples ===============
+maxdel = ma.SR *(180);
+
+gain = hslider("[1] [midi:ctrl 1]", 0, -70, +6, 0.1) : ba.db2linear : si.smoo;
+
+B = checkbox("[1] Uncheck me after the incipit (max 180s)");
+I = int(B);
+R = (I-I') <= 0; // Clear
+D = (+(I):*(R))~_; // Caompuite the delay time during Incipit
+
+L = checkbox("[2] I'm Sitting... Uncheck me at the end");	//
+IL = int(L); // convert button signal from float to integer
+
+process = vgroup("[2] Input", hmeter) :
+          vgroup("[1] -------> Check both boxes to start <-------", *(IL) : de.delay(maxdel, D-1)) :
+          vgroup("[3] ", preeq : studioeq : *(gain) : hmeter);
+
+//================= Environment - Tweaked from faust examples ===============
+// it will be included into SEAM.lib 
+
 hmeter(x)	= attach(x, envelop(x) : hbargraph("[2][unit:dB]", -46, +5));
 vmeter(x)	= attach(x, envelop(x) : vbargraph("[2][unit:dB]", -46, +5));
 envelop = abs : max ~ -(1.0/ma.SR) : max(ba.db2linear(-46)) : ba.linear2db;
@@ -55,19 +73,3 @@ with{
 	LH = hs_group(vslider("[0] Gain [unit:dB] [style:knob] [tooltip: Amount of high-frequency boost or cut in decibels]",0,-40,40,.1));
 	FH = hs_group(vslider("[1] Freq [unit:Hz] [style:knob] [scale:log] [tooltip: Transition-frequency from boost (cut) to unity gain]",8000,20,10000,1));
 };
-
-maxdel = ma.SR *(180);
-
-gain = hslider("[1] [midi:ctrl 1]", 0, -70, +6, 0.1) : ba.db2linear : si.smoo;
-
-B = checkbox("[1] Uncheck me after the incipit (max 180s)");
-I = int(B);
-R = (I-I') <= 0; // Clear
-D = (+(I):*(R))~_; // Caompuite the delay time during Incipit
-
-L = checkbox("[2] I'm Sitting... Uncheck me at the end");	//
-IL = int(L); // convert button signal from float to integer
-
-process = vgroup("[2] Input", hmeter) :
-          vgroup("[1] -------> Check both boxes to start <-------", *(IL) : de.delay(maxdel, D-1)) :
-          vgroup("[3] ", preeq : studioeq : *(gain) : hmeter);
