@@ -1,6 +1,6 @@
-# 1969 - Alvin Lucier - I'm sitting in a room - Faust Code
+# 1969 - Alvin Lucier - I am sitting in a room - Faust Code
 
-For the composition *I'm sitting in a room* in 1969, Lucier provided only
+For the composition *I am sitting in a room* in 1969, Lucier provided only
 instruction with equipment of that time. The process itself so clear and linear
 to reproduce.
 
