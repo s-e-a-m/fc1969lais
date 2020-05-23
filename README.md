@@ -9,4 +9,4 @@ interpretation of the score.
 
 ## GUI
 
-![GUI](https://github.com/s-e-a-m/fc1969lais/blob/master/resources/GUI.png)
+![GUI](https://raw.githubusercontent.com/s-e-a-m/fc1969lais/master/resources/GUI.png)
