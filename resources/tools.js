@@ -21,7 +21,7 @@ function getAudioCtx() {
 
 //////////////////////////////////////////////////////////////:
 function loadDsp(node) {
-
+    
     const json = JSON.parse(node.getJSON());
     const faustUi = new FaustUI.FaustUI({root: document.getElementById(json.name)});
     const audioCtx = node.context;
@@ -29,7 +29,7 @@ function loadDsp(node) {
     faustUi.paramChangeByUI = (path, value) => {
         node.setParamValue(path, value);
     };
-
+    
     node.setOutputParamHandler((path, value) => {
         faustUi.paramChangeByDSP(path, value);
     });
@@ -38,3 +38,5 @@ function loadDsp(node) {
 
     node.connect(audioCtx.destination);
 }
+
+

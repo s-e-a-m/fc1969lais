@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Volume frame</title>
+
+   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body style="margin: 0; position: absolute; width: 100%; height: 100%; overflow: hidden; background-color: transparent;">
+    <div id="Volume" style="width: 100%; height: 100%; margin: 0; position: absolute; overflow: auto; display: flex; flex-direction: column;"></div>
+</body>
+
+<script src="../../sources/FaustWasm2ScriptProcessor.js"></script>
+<script src="../../sources/faust-ui.js"></script>
+<script src="../../sources/tools.js"></script>
+
+<script>
+	var contexteAudio = getAudioCtx();
+	new FaustWasm2ScriptProcessor("../../sources/Volume").createDSP(contexteAudio, 1024).then(loadDsp);
+</script>
+</html>
