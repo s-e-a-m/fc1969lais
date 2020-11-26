@@ -1,12 +1,10 @@
 
 /*
-Code generated with Faust version 2.28.8
+Code generated with Faust version 2.28.5
 Compilation options: -lang wasm -scal -ftz 2
 */
 
-function getJSON1969lais() {
-	return '{"name": "ALVIN LUCIER - I am SITTING IN A ROOM (1969)","filename": "1969lais.dsp","version": "2.28.8","compile_options": "-lang wasm -scal -ftz 2","library_list": ["/Users/giuseppesilvi/Documents/GitHub/organizations/S-E-A-M/faust/fc1969lais/../faust-libraries/seam.lib","/usr/local/share/faust/stdfaust.lib","/usr/local/share/faust/delays.lib","/usr/local/share/faust/maths.lib","/usr/local/share/faust/platform.lib","/Users/giuseppesilvi/Documents/GitHub/organizations/S-E-A-M/faust/faust-libraries/seam.hardware.lib","/usr/local/share/faust/basics.lib","/usr/local/share/faust/signals.lib","/Users/giuseppesilvi/Documents/GitHub/organizations/S-E-A-M/faust/faust-libraries/seam.analyzers.lib","/usr/local/share/faust/analyzers.lib"],"include_pathnames": ["/usr/local/share/faust","/usr/local/share/faust","/usr/share/faust",".","/Users/giuseppesilvi/Documents/GitHub/organizations/S-E-A-M/faust/fc1969lais","/Users/giuseppesilvi/Documents/GitHub/organizations/S-E-A-M/faust/fc1969lais/../faust-libraries"],"size": 268435528,"inputs": 1,"outputs": 1,"meta": [ { "../faust-libraries/seam.lib/author": "Giuseppe Silvi" },{ "../faust-libraries/seam.lib/license": "CC3" },{ "../faust-libraries/seam.lib/name": "Faust SEAM main lib" },{ "../faust-libraries/seam.lib/version": "0.2" },{ "analyzers.lib/name": "Faust Analyzer Library" },{ "analyzers.lib/version": "0.1" },{ "author": "Giuseppe Silvi" },{ "basics.lib/name": "Faust Basic Element Library" },{ "basics.lib/version": "0.1" },{ "copyright": "(c)SEAM 2019" },{ "delays.lib/name": "Faust Delay Library" },{ "delays.lib/version": "0.1" },{ "description": "Alvin Lucier, I am sitting in a room - live electronic model" },{ "filename": "1969lais.dsp" },{ "license": "GNU-GPL-v3" },{ "maths.lib/author": "GRAME" },{ "maths.lib/copyright": "GRAME" },{ "maths.lib/license": "LGPL with exception" },{ "maths.lib/name": "Faust Math Library" },{ "maths.lib/version": "2.3" },{ "name": "ALVIN LUCIER - I am SITTING IN A ROOM (1969)" },{ "options": "[midi:on] [httpd:on]" },{ "platform.lib/name": "Generic Platform Library" },{ "platform.lib/version": "0.1" },{ "seam.analyzers.lib/author": "Giuseppe Silvi" },{ "seam.analyzers.lib/license": "CC4" },{ "seam.analyzers.lib/name": "Faust Ambisonic Element Library" },{ "seam.analyzers.lib/version": "0.1" },{ "seam.hardware.lib/author": "Giuseppe Silvi and Davide Tedesco" },{ "seam.hardware.lib/license": "CC4" },{ "seam.hardware.lib/name": "Faust Hardware Interface Library" },{ "seam.hardware.lib/version": "0.1" },{ "signals.lib/name": "Faust Signal Routing Library" },{ "signals.lib/version": "0.0" },{ "version": "010" }],"ui": [ {"type": "vgroup","label": "ALVIN LUCIER - I am SITTING IN A ROOM (1969)","items": [ {"type": "vgroup","label": "Check both boxes to start","meta": [{ "01": "" }],"items": [ {"type": "checkbox","label": "Uncheck me after the incipit","address": "/ALVIN_LUCIER_-_I_am_SITTING_IN_A_ROOM_(1969)/Check_both_boxes_to_start/Uncheck_me_after_the_incipit","index": 268435488,"meta": [{ "01": "" }]},{"type": "checkbox","label": "I am Sitting... Uncheck me at the end","address": "/ALVIN_LUCIER_-_I_am_SITTING_IN_A_ROOM_(1969)/Check_both_boxes_to_start/I_am_Sitting..._Uncheck_me_at_the_end","index": 12,"meta": [{ "02": "" }]}]},{"type": "hgroup","label": "0x00","meta": [{ "02": "" }],"items": [ {"type": "hgroup","label": "0x00","meta": [{ "03": "" }],"items": [ {"type": "vslider","label": "0x00","address": "/ALVIN_LUCIER_-_I_am_SITTING_IN_A_ROOM_(1969)/0x00/0x00/0x00","index": 0,"meta": [{ "08": "" },{ "midi": "ctrl 88" }],"init": 0,"min": -70,"max": 6,"step": 0.1},{"type": "vbargraph","label": "0x7fcb31a8bae0","address": "/ALVIN_LUCIER_-_I_am_SITTING_IN_A_ROOM_(1969)/0x00/0x00/0x7fcb31a8bae0","index": 268435524,"meta": [{ "90": "" },{ "unit": "dB" }],"min": -70,"max": 6}]}]}]}]}';
-}
+
 /*
  faust2webaudio
 
@@ -459,16 +457,7 @@ class FaustWasm2ScriptProcessor {
     }
 }
 
-const dspName = "1969lais";
-const instance = new FaustWasm2ScriptProcessor(dspName);
 
-// output to window or npm package module
-if (typeof module === "undefined") {
-    window[dspName] = instance;
-} else {
-    const exp = {};
-    exp[dspName] = instance;
-    module.exports = exp;
-}
 
-// Usage : 1969lais.createDSP(audioCtx, 1024).then(dsp => dsp.connect(audioCtx.destination));
+
+// Usage : phaseRhode.createDSP(audioCtx, 1024).then(dsp => dsp.connect(audioCtx.destination));
