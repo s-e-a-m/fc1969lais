@@ -11,7 +11,7 @@
 </head>
 
 <body style="margin: 0; position: absolute; width: 100%; height: 100%; overflow: hidden; background-color: transparent;">
-    <div id="1969lais" style="width: 100%; height: 100%; margin: 0; position: absolute; overflow: auto; display: flex; flex-direction: column;"></div>
+    <div id="Volume" style="width: 100%; height: 100%; margin: 0; position: absolute; overflow: auto; display: flex; flex-direction: column;"></div>
 </body>
 
 <script src="FaustWasm2ScriptProcessor.js"></script>
@@ -20,6 +20,6 @@
 
 <script>
 	var contexteAudio = getAudioCtx();
-	new FaustWasm2ScriptProcessor("1969lais").createDSP(contexteAudio, 1024).then(loadDsp);
+	new FaustWasm2ScriptProcessor("Volume").createDSP(contexteAudio, 1024).then(loadDsp);
 </script>
 </html>
