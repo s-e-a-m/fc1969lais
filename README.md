@@ -11,4 +11,4 @@ interpretation of the score.
 
 ![GUI](https://raw.githubusercontent.com/s-e-a-m/fc1969lais/master/resources/GUI.png)
 
-<iframe style="border:0; width:100%; height:500px;" src="1969lais.html"></iframe>
+<iframe style="border:0; width:100%; height:500px;" src="1969lais_html.html"></iframe>
