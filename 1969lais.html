@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I'm Sitting…</title>
+</head>
+
+<body style="margin: 0; position: absolute; width: 100%; height: 100%; overflow: hidden; background-color: transparent;">
+    <div id="sitting" style="width: 100%; height: 100%; margin: 0; position: absolute; overflow: auto; display: flex; flex-direction: column;"></div>
+</body>
+
+<script src="1969lais.js"></script>
+<script src="faust-ui.js"></script>
+<script src="tools.js"></script>
+
+<script>
+	var contexteAudio = getAudioCtx();
+	new 1969lais("1969.lais").createDSP(contexteAudio, 1024).then(loadDsp);
+</script>
+</html>

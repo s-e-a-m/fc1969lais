@@ -23,4 +23,8 @@ main = vgroup("[01] Check both boxes to start",
     L = int(checkbox("[02] I am Sitting... Uncheck me at the end"));
   };
 
-process = ctrlgroup(chstrip) : main : ctrlgroup(hgroup("[03] ", *(g88) : svmeter));
+input = ctrlgroup(chstrip);
+output = ctrlgroup(hgroup("[03] ", *(shw.g88) : san.pvmeter));
+
+//process = input : main : output;
+process = main : output; // web example
