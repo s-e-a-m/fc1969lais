@@ -13,12 +13,12 @@
     <div id="sitting" style="width: 100%; height: 100%; margin: 0; position: absolute; overflow: auto; display: flex; flex-direction: column;"></div>
 </body>
 
-<script src="1969lais_script.js"></script>
+<script src="FaustWasm2ScriptProcessor.js"></script>
 <script src="faust-ui.js"></script>
 <script src="tools.js"></script>
 
 <script>
 	var contexteAudio = getAudioCtx();
-	new FaustWasm2ScriptProcessor("1969lais_wasm").createDSP(contexteAudio, 1024).then(loadDsp);
+	new FaustWasm2ScriptProcessor("1969lais").createDSP(contexteAudio, 1024).then(loadDsp);
 </script>
 </html>
